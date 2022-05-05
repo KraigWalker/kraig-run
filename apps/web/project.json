@@ -1,5 +1,4 @@
 {
-  "root": "apps/web",
   "sourceRoot": "apps/web",
   "projectType": "application",
   "targets": {
@@ -12,7 +11,8 @@
         "outputPath": "dist/apps/web"
       },
       "configurations": {
-        "production": {}
+        "production": {},
+        "development": {}
       }
     },
     "serve": {
@@ -25,8 +25,13 @@
         "production": {
           "buildTarget": "web:build:production",
           "dev": false
+        },
+        "development": {
+          "buildTarget": "web:build:development",
+          "dev": true
         }
-      }
+      },
+      "defaultConfiguration": "development"
     },
     "export": {
       "executor": "@nrwl/next:export",
@@ -38,7 +43,7 @@
       "executor": "@nrwl/jest:jest",
       "outputs": ["coverage/apps/web"],
       "options": {
-        "jestConfig": "apps/web/jest.config.js",
+        "jestConfig": "apps/web/jest.config.ts",
         "passWithNoTests": true
       }
     },
