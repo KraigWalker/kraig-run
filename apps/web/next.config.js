@@ -38,6 +38,14 @@ const securityHeaders = [
     key: 'Content-Security-Policy',
     value: ContentSecurityPolicy.replace(/\s{2,}/g, ' ').trim(),
   },
+  {
+    key: 'Server',
+    value: null, // hide server header
+  },
+  {
+    key: 'Content-Disposition',
+    value: null, // hide content disposition header
+  },
 ];
 
 /**
