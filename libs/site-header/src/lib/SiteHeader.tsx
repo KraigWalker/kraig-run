@@ -5,9 +5,17 @@ export interface SiteHeaderProps {}
 
 export function SiteHeader(props: SiteHeaderProps) {
   return (
-    <div className={styles['container']}>
-      <h1>Welcome to SiteHeader!</h1>
-    </div>
+    <header role="banner" className={styles['banner']}>
+      <h1 className={styles['title']}>kraig.run</h1>
+      <nav>
+        <ul>
+          <li>Journal</li>
+          <li>Stats</li>
+          <li>About</li>
+          <li>Gear</li>
+        </ul>
+      </nav>
+    </header>
   );
 }
 

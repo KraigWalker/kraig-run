@@ -8,9 +8,14 @@ html {
   scroll-behavior: smooth;
 }
 body {
+  border: 0 solid #fff8e0;
+  border-radius: 0;
+  background-color: #fff8df;
+
   font-family: inherit;
   line-height: inherit;
   margin: 0;
+  min-height: 100%;
 }
 h1,
 h2,
@@ -397,4 +402,23 @@ summary svg {
   #middle-content {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+}
+
+.background-container {
+  border: 2px solid #fff8df;
+  border-radius: 20px;
+  background-color: #242424;
+  background-image: url(../public/images/dots.svg);
+  background-size: auto;
+  background-repeat: repeat;
+  background-attachment: scroll;
+}
+
+.app {
+  display: flex;
+  width: 95%;
+  margin: auto;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
 }
