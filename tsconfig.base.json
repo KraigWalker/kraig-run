@@ -14,7 +14,9 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@kraigwalker/run-site-header": ["libs/site-header/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
