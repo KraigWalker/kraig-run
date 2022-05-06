@@ -6,8 +6,8 @@ const ContentSecurityPolicy = `
   script-src 'self';
   child-src https://kraig.run;
   style-src 'self' https://kraig.run;
-  font-src 'self'
-  connect-src 'self' vitals.vercel-insights.com`;
+  font-src 'self';
+  connect-src 'self' vitals.vercel-insights.com;`;
 
 const securityHeaders = [
   {
