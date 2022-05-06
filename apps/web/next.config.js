@@ -4,6 +4,7 @@ const withNx = require('@nrwl/next/plugins/with-nx');
 const ContentSecurityPolicy = `
   default-src 'self';
   script-src 'self';
+  img-src 'self';
   child-src https://kraig.run;
   style-src 'self' https://kraig.run;
   font-src 'self';
