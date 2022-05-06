@@ -46,6 +46,10 @@ const securityHeaders = [
     key: 'Content-Disposition',
     value: null, // hide content disposition header
   },
+  {
+    key: 'Age',
+    value: null,
+  },
 ];
 
 /**
