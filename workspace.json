@@ -1,6 +1,7 @@
 {
   "version": 2,
   "projects": {
+    "site-footer": "libs/site-footer",
     "site-header": "libs/site-header",
     "web": "apps/web",
     "web-e2e": "apps/web-e2e"

@@ -1,6 +1,8 @@
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const withNx = require('@nrwl/next/plugins/with-nx');
 
+const isProduction = process.env.NODE_ENV === 'production';
+
 const ContentSecurityPolicy = `
   default-src 'self';
   script-src 'self';
@@ -37,19 +39,9 @@ const securityHeaders = [
   },
   {
     key: 'Content-Security-Policy',
-    value: ContentSecurityPolicy.replace(/\s{2,}/g, ' ').trim(),
-  },
-  {
-    key: 'Server',
-    value: null, // hide server header
-  },
-  {
-    key: 'Content-Disposition',
-    value: null, // hide content disposition header
-  },
-  {
-    key: 'Age',
-    value: null,
+    value: isProduction
+      ? ContentSecurityPolicy.replace(/\s{2,}/g, ' ').trim()
+      : '',
   },
 ];
 

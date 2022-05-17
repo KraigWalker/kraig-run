@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@kraigwalker/run-site-footer": ["libs/run-site-footer/src/index.ts"],
       "@kraigwalker/run-site-header": ["libs/site-header/src/index.ts"]
     }
   },

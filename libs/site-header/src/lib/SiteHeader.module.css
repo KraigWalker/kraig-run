@@ -1,7 +1,33 @@
-/*
- * Replace this with your own classes
- *
- * e.g.
- * .container {
- * }
-*/
+.banner {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 5vw;
+  padding: 2px;
+  flex-direction: row;
+  flex: 0 0 auto;
+  border: 0 solid rgba(255, 248, 223, 0);
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  background-color: #1b1b1b;
+  overflow: hidden;
+}
+
+.border {
+  overflow: hidden;
+  border-radius: 20px;
+  border: rgb(255, 248, 222);
+}
+
+.top-border {
+}
+
+.right-border {
+}
+
+.bottom-border {
+}
+
+.left-border {
+}
