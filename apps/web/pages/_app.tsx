@@ -1,6 +1,6 @@
 import { AppProps } from 'next/app';
 import Head from 'next/head';
-import { defaultTheme, Provider } from '@adobe/react-spectrum';
+import { SSRProvider, defaultTheme, Provider } from '@adobe/react-spectrum';
 
 import { SiteHeader } from '@kraigwalker/run-site-header';
 import './styles.css';
@@ -11,12 +11,14 @@ function CustomApp({ Component, pageProps }: AppProps) {
       <Head>
         <title>Kraig.run | The Running Journal of Kraig Walker</title>
       </Head>
-      <Provider theme={defaultTheme}>
-        <SiteHeader />
-        <main className="app">
-          <Component {...pageProps} />
-        </main>
-      </Provider>
+      <SSRProvider>
+        <Provider theme={defaultTheme}>
+          <SiteHeader />
+          <main className="app">
+            <Component {...pageProps} />
+          </main>
+        </Provider>
+      </SSRProvider>
     </>
   );
 }

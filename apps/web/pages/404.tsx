@@ -1,4 +1,3 @@
-import styles from './index.module.css';
 
 export function NotFound() {
   /*
@@ -6,7 +5,7 @@ export function NotFound() {
    *
    * Note: The corresponding styles are in the ./index.css file.
    */
-  return <div className={styles.page}>404 Not Found</div>;
+  return <div>404 Not Found</div>;
 }
 
 export default NotFound;
