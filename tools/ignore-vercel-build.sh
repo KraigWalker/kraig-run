@@ -8,6 +8,8 @@ TS_VERSION=$(node -e "console.log(require('./package.json').devDependencies['typ
 
 # Log the version of npm being used
 npm --version
+# log node version (see if we can use corepack)
+node --version
 npm update -g npm@8
 
 # Install @nrwl/workspace in order to run the affected command
