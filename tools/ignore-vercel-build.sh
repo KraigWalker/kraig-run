@@ -12,8 +12,7 @@ npm --version
 node --version
 
 # Install @nrwl/workspace in order to run the affected command
-npx npm@8 install -D @nrwl/workspace@$NX_VERSION --prefer-offline
-npx npm@8 install -D typescript@$TS_VERSION --prefer-offline
+npx npm@8 install -D @nrwl/workspace@$NX_VERSION typescript@$TS_VERSION --prefer-offline
 
 # Run the affected command, comparing latest commit to the one before that
 npx nx affected:apps --plain --base HEAD~1 --head HEAD | grep $APP -q
