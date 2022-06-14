@@ -10,12 +10,10 @@ TS_VERSION=$(node -e "console.log(require('./package.json').devDependencies['typ
 npm --version
 # log node version (see if we can use corepack)
 node --version
-npm update -g npm@8
-npm --version
 
 # Install @nrwl/workspace in order to run the affected command
-npm install -D @nrwl/workspace@$NX_VERSION --prefer-offline
-npm install -D typescript@$TS_VERSION --prefer-offline
+npx npm@8 install -D @nrwl/workspace@$NX_VERSION --prefer-offline
+npx npm@8 install -D typescript@$TS_VERSION --prefer-offline
 
 # Run the affected command, comparing latest commit to the one before that
 npx nx affected:apps --plain --base HEAD~1 --head HEAD | grep $APP -q
