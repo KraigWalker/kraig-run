@@ -11,6 +11,7 @@ npm --version
 # log node version (see if we can use corepack)
 node --version
 npm update -g npm@8
+npm --version
 
 # Install @nrwl/workspace in order to run the affected command
 npm install -D @nrwl/workspace@$NX_VERSION --prefer-offline
