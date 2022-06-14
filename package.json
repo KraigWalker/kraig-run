@@ -8,6 +8,9 @@
     "test": "nx test"
   },
   "private": true,
+  "engines": {
+    "npm": "^8.0.0"
+  },
   "dependencies": {
     "@adobe/react-spectrum": "^3.18.0",
     "@nrwl/next": "14.3.1",
