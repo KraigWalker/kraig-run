@@ -1,5 +1,7 @@
 import { AppProps } from 'next/app';
 import Head from 'next/head';
+import { defaultTheme, Provider } from '@adobe/react-spectrum';
+
 import { SiteHeader } from '@kraigwalker/run-site-header';
 import './styles.css';
 
@@ -9,12 +11,12 @@ function CustomApp({ Component, pageProps }: AppProps) {
       <Head>
         <title>Kraig.run | The Running Journal of Kraig Walker</title>
       </Head>
-      <div className="background-container">
+      <Provider theme={defaultTheme}>
         <SiteHeader />
         <main className="app">
           <Component {...pageProps} />
         </main>
-      </div>
+      </Provider>
     </>
   );
 }
